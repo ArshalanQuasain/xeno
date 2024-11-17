@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000/api', // Centralized API base URL
+  baseURL: 'https://xeno-78h9.onrender.com/api', // Centralized API base URL
   headers: {
     'Content-Type': 'application/json',
   },
