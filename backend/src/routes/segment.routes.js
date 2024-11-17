@@ -10,6 +10,7 @@ const router = Router();
 // Route to create a new audience segment
 router.post('/', createSegment);
 
+
 // Route to get all audience segments
 router.get('/', getAllSegments);
 
