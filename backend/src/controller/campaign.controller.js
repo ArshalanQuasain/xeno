@@ -95,6 +95,7 @@ export const getAllCampaigns = asyncHandler(async (req, res) => {
 
   const campaigns = await Campaign.find()
     .populate('segment_id')
+    .sort({ createdAt: -1 }) // Sort by date (newer campaigns first)
     .skip((page - 1) * limit)
     .limit(Number(limit));
 
@@ -104,3 +105,4 @@ export const getAllCampaigns = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, { campaigns, total, page, limit }, 'Campaigns retrieved successfully'));
 });
+
