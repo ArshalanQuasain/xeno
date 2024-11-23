@@ -17,8 +17,6 @@ app.use(cors({
 }));
 
 
-
-
 // Security Headers
 app.use((req, res, next) => {
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
@@ -41,4 +39,4 @@ app.use('/api/segment', segmentRoutes);
 app.use('/api/communication_log', communicationLogRoutes);
 app.use('/api/auth', authRoutes);
 
-export { app };
+export default app;
